@@ -3,16 +3,16 @@
 <h1> Badge Submitted </h1>
 
 <p>
-  <strong>Issue date:</strong>
-  <%= @badge.issue_date %>
-</p>
-
-<p>
-  <strong>Recipient name:</strong>
-  <%= @badge.recipient_name %>
+  <strong>Badge UUID:</strong>
+  <%= @badge.badge_uuid %>
 </p>
 
 <p>
   <strong>Hash:</strong>
-  <%= @badge.hash %>
+  <%= @badge.calculate_hash %>
+</p>
+
+<p>
+  <strong>Hash ID node:</strong>
+  <%= @node.proof_id %>
 </p>

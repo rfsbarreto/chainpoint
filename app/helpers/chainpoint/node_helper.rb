@@ -1,0 +1,2 @@
+module Chainpoint::NodeHelper
+end

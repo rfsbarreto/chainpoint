@@ -1,5 +1,7 @@
+require 'clients/chainpoint_client'
+
 class BadgesController < ApplicationController
-  before_action :set_badge, only: %i[show]
+  before_action :set_badge_and_node, only: %i[show]
 
   # GET /badges/1 or /badges/1.json
   def show; end
@@ -22,8 +24,9 @@ class BadgesController < ApplicationController
 
   private
 
-  def set_badge
+  def set_badge_and_node
     @badge = Badge.find(params[:id])
+    @node = Chainpoint::Node.build_from_badge(@badge)
   end
 
   # Use callbacks to share common setup or constraints between actions.
