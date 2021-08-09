@@ -1,5 +1,3 @@
-require 'clients/chainpoint_client'
-
 class BadgesController < ApplicationController
   before_action :set_badge_and_node, only: %i[show]
 
